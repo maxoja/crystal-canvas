@@ -7,10 +7,7 @@ this turtle-based tiny project aims to have fun with turtle drawing library whil
         <th width="65%">rendered result</th>
     </tr>
     <tr>
-        <td rowspan="1" align="center"> use default constructor and draw </td>
-        <th rowspan="100">
-            <img src="./mdsource/example_0.png">
-        </th>
+        <td colspan="2"></td>
     </tr>
     <tr>
         <td><pre>
@@ -19,6 +16,9 @@ from crstcanvas import CrystalCanvas</pre>
             <pre>
 #render it
 CrystalCanvas().draw()</pre></td>
+        <td>
+            <img src="./mdsource/example_0.png">
+        </td>
     </tr>
 </table>
 </br>
@@ -42,69 +42,65 @@ a **KERNEL** function accepts some parameters related to each shard draw with fo
 |y       |relative position on y-axis within range [-1,1]               |
 |tone    |value within range [0.0,1.0] randomed initially for each shard|
 
+### Inspirational Kernel
 <table>
     <tr>
         <th width="35%">kernel</th>
         <th width="65%">rendered result</th>
     </tr>
     <tr>
-        <td rowspan="1" align="center"> diamond gredient </td>
-        <th rowspan="2">
-            <img src="./mdsource/example_1.png">
-        </th>
+        <td colspan="2"> </td>
     </tr>
     <tr>
         <td><pre>
+#diamond gredient
 def kernel(x,y, tone):
     tone /= (abs(x) + abs(y))*8
     return tone</pre><p align="center">CrystalCanvas(kernel=kernel).draw()</p></td>
+        <td><img src="./mdsource/example_1.png"></td>
     </tr>
     <tr>
-        <td rowspan="1" align="center"> sine wave </td>
-        <th rowspan="2">
-            <img src="./mdsource/example_2.png">
-        </th>
+        <td colspan="2"></td>
     </tr>
     <tr>
         <td><pre>
+#sine wave
 def kernel(x,y, tone):
-    freq = 2
-    reduce = 0.4
-    amp = 0.6
-    scatter = 0.4
-    yt = amp*sin(freq*x*3.14)
-    diff = 1 - abs(yt-y)*scatter**-1
-    impact = diff-reduce
-    return tone + impact</pre></td>
+    yt = 0.6*sin(2*x*3.14)
+    diff = 1 - abs(yt-y)/0.4
+    impact = diff-0.4
+    return tone + impact</pre><p align="center">CrystalCanvas(kernel=kernel).draw()</p></td>
+        <td>
+            <img src="./mdsource/example_2.png">
+        </td>
     </tr>
     <tr>
-        <td rowspan="1" align="center"> light horizontal gredient </td>
-        <th rowspan="2">
-            <img src="./mdsource/example_3.png">
-        </th>
+        <td colspan="2"> </td>
     </tr>
     <tr>
         <td><pre>
+#light horizontal gredient
 def kernel(x,y, tone):
     tone += abs(x)**0.5
-    return 1-tone</pre></td>
+    return 1-tone</pre><p align="center">CrystalCanvas(kernel=kernel).draw()</p></td>
+        <td>
+            <img src="./mdsource/example_3.png">
+        </td>
     </tr>
     <tr>
-        <td rowspan="1" align="center"> tilted gredient </td>
-        <th rowspan="2">
-            <img src="./mdsource/example_4.png">
-        </th>
+        <td colspan="2"></td>
     </tr>
     <tr>
         <td><div class="highlight highlight-source-python"><pre>
+#tilted gredient
 def kernel(x,y, tone):
-    reduce = 0.6
-    slope = 3
-    scatter = 1.4
-    yt = slope*x
-    diff = 1 - abs(yt-y)/scatter
-    impact = diff - reduce
-    return tone + impact</pre>
+    yt = 3*x
+    diff = 1 - abs(yt-y)/1.4
+    impact = diff - 0.6
+    return tone + impact</pre><p align="center">CrystalCanvas(kernel=kernel).draw()</p></td>
+        <td>
+            <img src="./mdsource/example_4.png">
+        </td>
     </tr>
 </table>
 
