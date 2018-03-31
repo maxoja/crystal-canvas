@@ -23,7 +23,7 @@ CrystalCanvas().draw()</pre></td>
 </table>
 </br>
 
-## Advanced Details and Examples
+## Advanced Usage
 
 > optionally, the `constructor` of the canvas provides flexibility to control output quality and resolution.
 
