@@ -4,16 +4,21 @@ the simplest use of the crystal canvas would be as followed. it randoms shade on
 ![](./mdsource/example_0.png)
 <table>
     <tr>
-        <th>Implementation</th>
-        <th>Rendered Result</th>
+        <th width="35%">Implementation</th>
+        <th width="65%">Rendered Result</th>
     </tr>
     <tr>
-        <td><div><pre name="code" class="python">
+        <td rowspan="1" align="center"> use default constructor and draw </td>
+        <th rowspan="100">
+            <img src="https://github.com/maxoja/crystal-canvas/blob/readme-and-examples/mdsource/example_0.png">
+        </th>
+    </tr>
+    <tr>
+        <td><div class="highlight highlight-source-python"><pre>
+from crstcanvas import CrystalCanvas
+        </pre></div><div class="highlight highlight-source-python"><pre>
 CrystalCanvas().draw()
         </pre></div></td>
-        <td>
-            <img src="https://github.com/maxoja/crystal-canvas/blob/readme-and-examples/mdsource/example_0.png">
-        <td>
     </tr>
 </table>
 
