@@ -1,12 +1,11 @@
 # Crystal Canvas
 the simplest use of the crystal canvas would be as followed. it randoms shade on each shard and renders triangular noise with the size of 600x240 by default.
 
+![](./mdsource/example_0.png)
 ```python
 from crstcanvas import CrystalCanvas
 CrystalCanvas().draw()
 ```
-
-![](./mdsource/example_0.png)
 
 
 
@@ -22,14 +21,15 @@ a kernel function accepts some parameters related to each shard draw with follow
 |tone    |value within range [0.0,1.0] randomed initially for each shard|
 
 ###### Diamond Gredient Kernel
+![](./mdsource/example_1.png)
 ```python
 def kernel(x,y, tone):
     tone /= (abs(x) + abs(y))*8
     return tone
 ```
-![](./mdsource/example_1.png)
 
 ###### Sine Wave Kernel
+![](./mdsource/example_2.png)
 ```python
 def kernel(x,y, tone):
     freq = 2
@@ -44,18 +44,18 @@ def kernel(x,y, tone):
 
     return tone
 ```
-![](./mdsource/example_2.png)
 
 ###### Light Horizontal Gredient Kernel
+![](./mdsource/example_3.png)
 ```python
 def kernel(x,y, tone):
     tone += abs(x)**0.5
     return 1-tone
 ```
-![](./mdsource/example_3.png)
 
 
 ###### Tilted Gredient Kernel
+![](./mdsource/example_4.png)
 ```python
 def kernel(x,y, tone):
     reduce = 0.6
@@ -68,4 +68,5 @@ def kernel(x,y, tone):
 
     return tone + impact
 ```
-![](./mdsource/example_4.png)
+
+###### latest README.MD update : 31 March 2018 9:33pm
