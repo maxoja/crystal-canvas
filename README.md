@@ -23,7 +23,7 @@ CrystalCanvas().draw()</pre></td>
 </table>
 </br>
 
-## Advanced Usage
+### Advanced Usage
 
 > optionally, the `constructor` of CrystalCanvas() provides flexibility to control output quality and resolution.
 
@@ -47,7 +47,7 @@ CrystalCanvas().draw()</pre></td>
 
 </br>
 
-## Inspirational Kernel
+### Inspirational Kernel
 <table>
     <tr>
         <th width="35%">kernel</th>
