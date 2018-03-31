@@ -26,6 +26,8 @@ a kernel function accepts some parameters related to each shard draw with follow
 def kernel(x,y, tone):
     tone /= (abs(x) + abs(y))*8
     return tone
+    
+CrystalCanvas(kernel=kernel).draw()
 ```
 
 ###### Sine Wave Kernel
