@@ -1,7 +1,6 @@
 # Crystal Canvas
 the simplest use of the crystal canvas would be as followed. it randoms shade on each shard and renders triangular noise with the size of 600x240 by default.
 
-![](./mdsource/example_0.png)
 <table>
     <tr>
         <th width="35%">Implementation</th>
@@ -10,7 +9,7 @@ the simplest use of the crystal canvas would be as followed. it randoms shade on
     <tr>
         <td rowspan="1" align="center"> use default constructor and draw </td>
         <th rowspan="100">
-            <img src="https://github.com/maxoja/crystal-canvas/blob/readme-and-examples/mdsource/example_0.png">
+            <img src="./mdsource/example_0.png">
         </th>
     </tr>
     <tr>
@@ -22,14 +21,23 @@ CrystalCanvas().draw()
     </tr>
 </table>
 
-## Advanced Examples
-in order to shape the canvas and form a pattern, a function(kernel) can be implemented to do so with a manner.
+## Advanced Details and Examples
+optionally, the constructor of the canvas provides flexibility to control output quality and resolution.
+
+|name       |default         |info                              |
+|-----------|----------------|------------------                |
+|res        |(600,240)       |render resolution                 |
+|grid_res_y |3               |shards' resolution                |
+|margin     |50              |htmler knows it                   |
+|kernel     |lambda a,b,t: t |kernel function (explained below) |
+
+moreover, in order to shape the canvas and form a pattern, a function(kernel) can be implemented to do so with a manner.
 a kernel function accepts some parameters related to each shard draw with following details and return a density value.
 
-|name    |info        |
-|--------|------------|
-|x       |relative position on x-axis within range [-1,1]|
-|y       |relative position on y-axis within range [-1,1] |
+|name    |info                                                          |
+|--------|--------------------------------------------------------------|
+|x       |relative position on x-axis within range [-1,1]               |
+|y       |relative position on y-axis within range [-1,1]               |
 |tone    |value within range [0.0,1.0] randomed initially for each shard|
 
 ###### Diamond Gredient Kernel
