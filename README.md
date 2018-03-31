@@ -24,7 +24,8 @@ CrystalCanvas().draw()</pre></td>
 </br>
 
 ## Advanced Details and Examples
-optionally, the **CONSTRUCTOR** of the canvas provides flexibility to control output quality and resolution.
+
+> optionally, the `constructor` of the canvas provides flexibility to control output quality and resolution.
 
 |name       |default         |info                              |
 |-----------|----------------|------------------                |
@@ -33,14 +34,16 @@ optionally, the **CONSTRUCTOR** of the canvas provides flexibility to control ou
 |margin     |50              |htmler knows it                   |
 |kernel     |lambda a,b,t: t |kernel function (explained below) |
 
-moreover, in order to shape the canvas and form a pattern, a function(kernel) can be implemented to do so with a manner.
-a **KERNEL** function accepts some parameters related to each shard draw with following details and return a density value.
+> moreover, in order to shape the canvas and form a pattern, a function(kernel) can be implemented to do so with a manner.
+> a `kernel` function accepts some parameters related to each shard draw with following details and return a density value.
 
 |name    |info                                                          |
 |--------|--------------------------------------------------------------|
 |x       |relative position on x-axis within range [-1,1]               |
 |y       |relative position on y-axis within range [-1,1]               |
 |tone    |value within range [0.0,1.0] randomed initially for each shard|
+
+</br>
 
 ### Inspirational Kernel
 <table>
@@ -79,7 +82,7 @@ def kernel(x,y, tone):
     </tr>
     <tr>
         <td><pre>
-#light horizontal gredient
+#mellow horizontal gredient
 def kernel(x,y, tone):
     tone += abs(x)**0.5
     return 1-tone</pre><p align="center">CrystalCanvas(kernel=kernel).draw()</p></td>
