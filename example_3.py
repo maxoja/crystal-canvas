@@ -8,3 +8,4 @@ def kernel(x,y, tone):
 
 c = crystal(res=(300,300), grid_res_y=10, kernel=kernel)
 c.draw()
+mainloop()

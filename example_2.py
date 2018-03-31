@@ -17,3 +17,4 @@ def kernel(x,y, tone):
 
 c = crystal(res=(600,300), grid_res_y=10, kernel=kernel)
 c.draw()
+mainloop()
