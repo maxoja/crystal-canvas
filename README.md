@@ -1,5 +1,5 @@
 # Crystal Canvas
-the simplest use of the crystal canvas would be as followed. it randoms shade on each shard and renders triangular noise with the size of 600x240 by default.
+this turtle-based tiny project aims to have fun with turtle drawing library while producing an artist-stylish tool which can be used by people (especialy the geeks). the simplest use of the crystal canvas would be as followed. it randoms shade on each shard and renders triangular noise with the size of 600x240 by default.
 
 <table>
     <tr>
@@ -14,8 +14,10 @@ the simplest use of the crystal canvas would be as followed. it randoms shade on
     </tr>
     <tr>
         <td><div class="highlight highlight-source-python"><pre>
+#import the class
 from crstcanvas import CrystalCanvas
         </pre></div><div class="highlight highlight-source-python"><pre>
+#render it
 CrystalCanvas().draw()
         </pre></div></td>
     </tr>
