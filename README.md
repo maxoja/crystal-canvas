@@ -22,9 +22,10 @@ CrystalCanvas().draw()
         </pre></div></td>
     </tr>
 </table>
+</br>
 
 ## Advanced Details and Examples
-optionally, the constructor of the canvas provides flexibility to control output quality and resolution.
+optionally, the **CONSTRUCTOR** of the canvas provides flexibility to control output quality and resolution.
 
 |name       |default         |info                              |
 |-----------|----------------|------------------                |
@@ -34,7 +35,7 @@ optionally, the constructor of the canvas provides flexibility to control output
 |kernel     |lambda a,b,t: t |kernel function (explained below) |
 
 moreover, in order to shape the canvas and form a pattern, a function(kernel) can be implemented to do so with a manner.
-a kernel function accepts some parameters related to each shard draw with following details and return a density value.
+a **KERNEL** function accepts some parameters related to each shard draw with following details and return a density value.
 
 |name    |info                                                          |
 |--------|--------------------------------------------------------------|
