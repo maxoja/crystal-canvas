@@ -60,8 +60,8 @@ CrystalCanvas().draw()</pre></td>
         <td><pre>
 #diamond gredient
 def kernel(x,y, tone):
-    tone /= (abs(x) + abs(y))*8
-    return tone</pre><p align="center">CrystalCanvas(kernel=kernel).draw()</p></td>
+    divisor = (abs(x) + abs(y))*8
+    return tone/divisor</pre><p align="center">CrystalCanvas(kernel=kernel).draw()</p></td>
         <td><img src="./mdsource/example_1.png"></td>
     </tr>
     <tr>
