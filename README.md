@@ -2,13 +2,20 @@
 the simplest use of the crystal canvas would be as followed. it randoms shade on each shard and renders triangular noise with the size of 600x240 by default.
 
 ![](./mdsource/example_0.png)
-```python
-from crstcanvas import CrystalCanvas
+<table>
+    <tr>
+        <th>Implementation</th>
+        <th>Rendered Result</th>
+    </tr>
+    <tr>
+        <td><div><pre name="code" class="python">
 CrystalCanvas().draw()
-```
-
-
-
+        </pre></div></td>
+        <td>
+            <img src="https://github.com/maxoja/crystal-canvas/blob/readme-and-examples/mdsource/example_0.png">
+        <td>
+    </tr>
+</table>
 
 ## Advanced Examples
 in order to shape the canvas and form a pattern, a function(kernel) can be implemented to do so with a manner.
