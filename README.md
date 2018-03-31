@@ -26,8 +26,6 @@ a kernel function accepts some parameters related to each shard draw with follow
 def kernel(x,y, tone):
     tone /= (abs(x) + abs(y))*8
     return tone
-
-CrystalCanvas(res=(300, 300), grid_res_y=10, kernel=kernel).draw()
 ```
 ![](./mdsource/example_1.png)
 
@@ -45,18 +43,29 @@ def kernel(x,y, tone):
     tone += impact
 
     return tone
-
-CrystalCanvas(res=(600,300), grid_res_y=10, kernel=kernel).draw()
 ```
 ![](./mdsource/example_2.png)
 
+###### Light Horizontal Gredient Kernel
 ```python
 def kernel(x,y, tone):
     tone += abs(x)**0.5
     return 1-tone
-    
-CrystalCanvas(res=(300,300), grid_res_y=10, kernel=kernel).draw()
 ```
 ![](./mdsource/example_3.png)
 
+
+###### Tilted Gredient Kernel
+```python
+def kernel(x,y, tone):
+    reduce = 0.6
+    slope = 3
+    scatter = 1.4
+
+    yt = slope*x
+    diff = 1 - abs(yt-y)/scatter
+    impact = diff - reduce
+
+    return tone + impact
+```
 ![](./mdsource/example_4.png)
