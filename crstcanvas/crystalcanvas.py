@@ -3,7 +3,7 @@ from math import *
 from random import *
 
 class CrystalCanvas:
-    def __init__(self, res=(300,300), grid_res_y=10, margin=50, kernel=lambda a,b,t: t):
+    def __init__(self, res=(600,240), grid_res_y=3, margin=50, kernel=lambda a,b,t: t):
         res_x, res_y = res
         self.scale = res_y/grid_res_y/4
         self.grid_res = {
