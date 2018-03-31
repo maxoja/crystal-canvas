@@ -3,8 +3,8 @@ this turtle-based tiny project aims to have fun with turtle drawing library whil
 
 <table>
     <tr>
-        <th width="35%">implementation</th>
-        <th width="65%">rendered result</th>
+        <th width="45%">implementation</th>
+        <th width="55%">rendered result</th>
     </tr>
     <tr>
         <td colspan="2"></td>
@@ -50,8 +50,8 @@ CrystalCanvas().draw()</pre></td>
 ### Inspirational Kernel
 <table>
     <tr>
-        <th width="35%">kernel</th>
-        <th width="65%">rendered result</th>
+        <th width="45%">kernel</th>
+        <th width="55%">rendered result</th>
     </tr>
     <tr>
         <td colspan="2"> </td>
