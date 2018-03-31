@@ -14,6 +14,7 @@ def kernel(x,y, tone):
 
     return tone
 
-c = crystal(res=(400,400), grid_res_y=8, kernel=kernel)
+# c = crystal(res=(400,400), grid_res_y=8, kernel=kernel)
+c = crystal(kernel=kernel)
 c.draw()
 mainloop()
