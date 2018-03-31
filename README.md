@@ -3,8 +3,8 @@ this turtle-based tiny project aims to have fun with turtle drawing library whil
 
 <table>
     <tr>
-        <th width="35%">Implementation</th>
-        <th width="65%">Rendered Result</th>
+        <th width="35%">implementation</th>
+        <th width="65%">rendered result</th>
     </tr>
     <tr>
         <td rowspan="1" align="center"> use default constructor and draw </td>
@@ -43,15 +43,75 @@ a **KERNEL** function accepts some parameters related to each shard draw with fo
 |y       |relative position on y-axis within range [-1,1]               |
 |tone    |value within range [0.0,1.0] randomed initially for each shard|
 
-###### Diamond Gredient Kernel
-![](./mdsource/example_1.png)
-```python
+### Inspirational Kernel
+<table>
+    <tr>
+        <th width="35%">kernel</th>
+        <th width="65%">rendered result</th>
+    </tr>
+    <tr>
+        <td rowspan="1" align="center"> diamond gredient </td>
+        <th rowspan="2">
+            <img src="./mdsource/example_1.png">
+        </th>
+    </tr>
+    <tr>
+        <td><div class="highlight highlight-source-python"><pre>
 def kernel(x,y, tone):
     tone /= (abs(x) + abs(y))*8
     return tone
-    
+        </pre></div><div class="highlight highlight-source-python"><pre>
 CrystalCanvas(kernel=kernel).draw()
-```
+        </pre></div></td>
+    </tr>
+    <tr>
+        <td rowspan="1" align="center"> sine wave </td>
+        <th rowspan="2">
+            <img src="./mdsource/example_2.png">
+        </th>
+    </tr>
+    <tr>
+        <td><div class="highlight highlight-source-python"><pre>
+def kernel(x,y, tone):
+    tone /= (abs(x) + abs(y))*8
+    return tone
+        </pre></div><div class="highlight highlight-source-python"><pre>
+CrystalCanvas(kernel=kernel).draw()
+        </pre></div></td>
+    </tr>
+    <tr>
+        <td rowspan="1" align="center"> light horizontal gredient </td>
+        <th rowspan="2">
+            <img src="./mdsource/example_3.png">
+        </th>
+    </tr>
+    <tr>
+        <td><div class="highlight highlight-source-python"><pre>
+def kernel(x,y, tone):
+    tone += abs(x)**0.5
+    return 1-tone
+        </pre></div><div class="highlight highlight-source-python"><pre>
+CrystalCanvas(kernel=kernel).draw()
+        </pre></div></td>
+    </tr>
+    <tr>
+        <td rowspan="1" align="center"> tilted gredient </td>
+        <th rowspan="2">
+            <img src="./mdsource/example_4.png">
+        </th>
+    </tr>
+    <tr>
+        <td><div class="highlight highlight-source-python"><pre>
+def kernel(x,y, tone):
+    reduce = 0.6
+    slope = 3
+    scatter = 1.4
+    yt = slope*x
+    diff = 1 - abs(yt-y)/scatter
+    impact = diff - reduce
+    return tone + impact
+    </tr>
+</table>
 
 ###### Sine Wave Kernel
 ![](./mdsource/example_2.png)
@@ -68,30 +128,6 @@ def kernel(x,y, tone):
     tone += impact
 
     return tone
-```
-
-###### Light Horizontal Gredient Kernel
-![](./mdsource/example_3.png)
-```python
-def kernel(x,y, tone):
-    tone += abs(x)**0.5
-    return 1-tone
-```
-
-
-###### Tilted Gredient Kernel
-![](./mdsource/example_4.png)
-```python
-def kernel(x,y, tone):
-    reduce = 0.6
-    slope = 3
-    scatter = 1.4
-
-    yt = slope*x
-    diff = 1 - abs(yt-y)/scatter
-    impact = diff - reduce
-
-    return tone + impact
 ```
 
 ###### latest README.MD update : 31 March 2018 9:33pm
