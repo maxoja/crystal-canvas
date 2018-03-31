@@ -8,13 +8,11 @@ def kernel(x,y, tone):
     scatter = 1.4
 
     yt = slope*x
-    diff = 1 - (abs(yt-y)/scatter)**1
-    impact = diff-reduce
-    tone += impact
+    diff = 1 - abs(yt-y)/scatter
+    impact = diff - reduce
 
-    return tone
+    return tone + impact
 
-# c = crystal(res=(400,400), grid_res_y=8, kernel=kernel)
 c = crystal(kernel=kernel)
 c.draw()
 mainloop()

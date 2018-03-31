@@ -86,7 +86,8 @@ def kernel(x,y, tone):
         <td><pre>
 #mellow horizontal gredient
 def kernel(x,y, tone):
-    tone += abs(x)**0.5
+    addition = sqrt(abs(x))
+    tone += addition
     return 1-tone</pre><p align="center">CrystalCanvas(kernel=kernel).draw()</p></td>
         <td>
             <img src="./mdsource/example_3.png">
@@ -105,6 +106,21 @@ def kernel(x,y, tone):
     return tone + impact</pre><p align="center">CrystalCanvas(kernel=kernel).draw()</p></td>
         <td>
             <img src="./mdsource/example_4.png">
+        </td>
+    </tr>
+        <tr>
+        <td colspan="2"></td>
+    </tr>
+    <tr>
+        <td><div class="highlight highlight-source-python"><pre>
+#reversed tilted gredient
+def kernel(x,y, tone):
+    yt = 3*x
+    diff = 1 - abs(yt-y)/1.4
+    impact = diff - 0.6
+    return 1 - (tone + impact)</pre><p align="center">CrystalCanvas(kernel=kernel).draw()</p></td>
+        <td>
+            <img src="./mdsource/example_5.png">
         </td>
     </tr>
 </table>
