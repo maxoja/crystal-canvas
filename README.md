@@ -1,5 +1,5 @@
 # Crystal Canvas
-this turtle-based tiny project aims to have fun with turtle drawing library while producing an artist-stylish tool which can be used by people, i hope. the simplest use of the crystal canvas would be as followed. by default, it randomize a shade on each shard and renders triangular noise with the size of 600x240.
+this turtle-based tiny project aims to have fun with turtle grapich library while producing an artistical-stylish library which can be used by people, i hope. the simplest use of the crystal canvas would be as followed. by default, it randomizes a shade for each shard and renders triangular noise with the size of 600x240.
 
 <table>
     <tr>
@@ -36,8 +36,8 @@ CrystalCanvas().draw()</pre></td>
 
 </br>
 
-> moreover, in order to shape the canvas and form a pattern, a function(kernel) can be implemented to do so with a manner.
-> a `kernel` function accepts some parameters related to each shard draw with following details and return a density value.
+> moreover, in order to form a pattern on a canvas, a `kernel` function can be implemented to do so in a manner.
+> it accepts some parameters related to each draw of a shard with the following details and return a density value of a color.
 
 |name    |info                                                             |
 |--------|-----------------------------------------------------------------|
